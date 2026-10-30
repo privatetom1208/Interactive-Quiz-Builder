@@ -1,0 +1,57 @@
+<!-- 
+NAME: Thomas Mairella
+DATE: // 10/30/26
+VERSION: // v1
+SOURCES USED: w3schools, slides from class, and ai (help only)
+COMMENTS / NOTES:
+- Description: simple game quiz website for mini project #6
+- Instructions: just open in any web browser ;)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Thomas Mairella">
+    <meta name="description" content="A landing page for an CrediblePick.">
+    <title>Simple Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+</head>
+<body>
+    <div class="quiz-box">
+        <h1>Simple Quiz Game</h1>
+
+        <div id="start-screen">
+            <p>Welcome to the SIMPLE QUIZ GAME!</p>
+            <p>Select your difficulty:</p>
+
+            <select id="difficulty">
+                <option value="E">Easy</option>
+                <option value="M">Medium</option>
+                <option value="H">Hard</option>
+            </select>
+
+            <br>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" style="display: none;">
+            <p id="question-number"></p>
+            <h2 id="question"></h2>
+            <div id="choices"></div>
+            <button id="submit-button" onclick="checkAnswer()">Submit Answer</button>
+            <p id="message"></p>
+        </div>
+
+        <div id="result-screen" style="display: none;">
+            <h2>Quiz is Over!</h2>
+            <p id="final-score"></p>
+            <button onclick="restartQuiz()">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
